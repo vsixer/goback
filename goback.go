@@ -1,7 +1,8 @@
 package main
 
 import (
-	"goback/auth"
+	"goback/core/output"
+	"net/http"
 )
 
 func main() {
@@ -13,5 +14,15 @@ func main() {
 
 	// test, _ := json.Marshal(authToket)
 
-	auth.Login()
+	// auth.Login()
+}
+
+func handler(w http.ResponseWriter, r *http.Request) {
+	output.Ok()
+}
+
+func initHTTPServer() {
+	http.HandleFunc("/", handler)
+
+	http.ListenAndServe(":8081", nil)
 }
