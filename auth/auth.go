@@ -3,8 +3,8 @@ package auth
 import (
 	"time"
 
-	"github.com/vsixer/goback/core/output"
-	"github.com/vsixer/goback/utils"
+	"goback/core/output"
+	"goback/utils"
 )
 
 // Token which is returned in response to an authorization request

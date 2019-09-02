@@ -1,13 +1,27 @@
 package output
 
+const (
+	responseStatusOk    = "OK"
+	responseStatusError = "ERROR"
+)
 
-
-// Ok response in case of success
+// Ok Возвращает ответ со статусом OK если:
+// - Запрос отработал нормально и запрашиваемые данные получены.
+// - Запрос отработал нормально и запрашиваемые данные не найдены.
 func Ok() {
 
 }
 
-// Error responce in case of anything not ok
+// Error Возвращает ответ со статусом ERROR если:
+// - Параметры запроса не валидны, либо отсутствуют обязательные данные.
+// - Не найден запрашиваемые контроллер или метод.
+// - Произошла непредвиденная ошибка. Например ошибка при выполнении запроса к БД.
+// - Отсутствуют необходимые права доступа.
 func Error() {
+
+}
+
+// Отправляет ответ клиенту
+func send(responseStatus string, responsePayload map[string]interface{}) {
 
 }

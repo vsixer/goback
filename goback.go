@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/vsixer/goback/auth"
+	"goback/auth"
 )
 
 func main() {
